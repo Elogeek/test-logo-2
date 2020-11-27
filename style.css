@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre&family=Sacramento&display=swap');
+
+html {
+    font-size: 10px;
+}
+
+#div1 {
+    font-family: 'Sacramento', cursive;
+    font-size: 39px;
+    color:turquoise;
+    text-align:center;
+    display:inline-block;
+}
+
+span {
+    font-family: 'Abhaya Libre', serif;
+    font-size:1em;
+}
+
+#rect {
+    width: 200px;
+    height: 100px;
+    border : 1px solid paleturquoise;
+    box-shadow: 2px 2px darkgray inset, 2px 2px darkgray ;
+}
+
+#roue1 {
+    display: inline-block;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    left: 10px;
+    border-radius: 100%;
+    border: 1px dashed turquoise ;
+    animation-name: rotation-roue;
+    animation-duration: 10s;
+}
+
+#roue2 {
+    display: inline-block;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    left: 80px;
+    border-radius: 100%;
+    border: 1px dashed turquoise;
+    animation-name: rotation-roue;
+    animation-duration: 10s;
+    transform-origin: center center;
+}
+
+#bus {
+    top: 150px;
+    position: absolute;
+    animation-name: direction-bus;
+    animation-duration: 10s;
+}
+
+@keyframes direction-bus {
+    0% {
+        left: 30px;
+    }
+    20% {
+        left: 200px;
+    }
+    50% {
+        left: 500px;
+
+    }
+    70% {
+        left:900px;
+    }
+    100% {
+        left: 1600px;
+    }
+}
+
+@keyframes rotation-roue {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25%{
+        transform: rotate(90deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    75% {
+        transform: rotate(240deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
