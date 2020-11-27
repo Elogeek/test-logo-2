@@ -5,12 +5,17 @@ html {
     font-size: 10px;
 }
 
+body {
+    position:relative;
+}
+
 #div1 {
     font-family: 'Sacramento', cursive;
     font-size: 39px;
     color:turquoise;
     text-align:center;
     display:inline-block;
+    margin-top: 41px;
 }
 
 span {
@@ -18,62 +23,41 @@ span {
     font-size:1em;
 }
 
-#rect {
-    width: 200px;
-    height: 100px;
-    border : 1px solid paleturquoise;
-    box-shadow: 2px 2px darkgray inset, 2px 2px darkgray ;
+.cercle {
+    height: 183px;
+    width: 280px;
+    border: 2px solid black;
+    border-radius: 50%;
+    margin-bottom: -17px;
+    position:absolute;
+    z-index:-1;
 }
 
 #roue1 {
-    display: inline-block;
     position: relative;
     width: 50px;
     height: 50px;
-    left: 10px;
+    left: 70px;
+    top : 159px;
     border-radius: 100%;
     border: 1px dashed turquoise ;
     animation-name: rotation-roue;
     animation-duration: 10s;
+    animation-iteration-count: infinite;
 }
 
 #roue2 {
-    display: inline-block;
     position: relative;
     width: 50px;
     height: 50px;
-    left: 80px;
+    left: 157px;
+    top : 110px;
     border-radius: 100%;
-    border: 1px dashed turquoise;
+    border: 1px dashed turquoise ;
     animation-name: rotation-roue;
     animation-duration: 10s;
     transform-origin: center center;
-}
-
-#bus {
-    top: 150px;
-    position: absolute;
-    animation-name: direction-bus;
-    animation-duration: 10s;
-}
-
-@keyframes direction-bus {
-    0% {
-        left: 30px;
-    }
-    20% {
-        left: 200px;
-    }
-    50% {
-        left: 500px;
-
-    }
-    70% {
-        left:900px;
-    }
-    100% {
-        left: 1600px;
-    }
+    animation-iteration-count: infinite;
 }
 
 @keyframes rotation-roue {
